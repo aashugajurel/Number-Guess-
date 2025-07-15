@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Difficulty Selection -->
+    <div id="difficultySelection" class="card">
+        <h2>Select Difficulty</h2>
+        <button id="easyButton">Easy (10 lives)</button>
+        <button id="normalButton">Normal (5 lives)</button>
+        <button id="hardButton">Hard (3 lives)</button>
+    </div>
+
+    <!-- Game Section -->
+    <div id="gameSection" class="card" style="display: none;">
+        <h2 id="insult">Let's do it!</h2>
+        <h3 id="range">Range: 0 - 100</h3>
+        <input type="number" id="input" placeholder="Guess the number" />
+        <p>Lives: <span id="remain"></span></p>
+        <button id="buttonEnter">Submit</button>
+        <button id="newGameButtonMain">New Game</button>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>No more tries left.</p>
+            <button id="newGameButtonModal">Try Again</button>
+        </div>
+    </div>
+
+    <!-- Win Modal -->
+    <div id="winGameModal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 Congratulations!</h2>
+            <p>You guessed the correct number!</p>
+            <button id="newGameButtonWin">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
